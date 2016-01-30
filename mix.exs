@@ -27,6 +27,6 @@ defmodule RobotRemoteServerElixir.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [{:xmlrpc, "~> 0.9.1"}]
   end
 end
