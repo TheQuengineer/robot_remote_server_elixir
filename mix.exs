@@ -3,7 +3,7 @@ defmodule RobotRemoteServerElixir.Mixfile do
 
   def project do
     [app: :robot_remote_server_elixir,
-     version: "0.0.1",
+     version: "1.0.0",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
@@ -14,7 +14,9 @@ defmodule RobotRemoteServerElixir.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :xmlrpc],
+     registered: [:robot_remote_server],
+     mod: {RobotRemoteServerElixir, []}]
   end
 
   # Dependencies can be Hex packages:
