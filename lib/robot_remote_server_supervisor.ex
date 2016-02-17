@@ -1,3 +1,0 @@
-defmodule RobotRemoteServerSupervisor do
-
-end

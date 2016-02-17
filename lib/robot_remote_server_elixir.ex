@@ -13,5 +13,9 @@
 # limitations under the License.
 
 defmodule RobotRemoteServerElixir do
-  use GenServer
+  use Application
+
+  # def start do
+  #    Robot.Supervisor.start_link
+  # end
 end
