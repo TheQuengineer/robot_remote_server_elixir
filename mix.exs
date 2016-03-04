@@ -15,8 +15,7 @@ defmodule RobotRemoteServerElixir.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger, :httpoison],
-     registered: [:RobotRemoteServerElixir],
-     #mod: {:RobotRemoteServerElixir, []}
+     mod: {RobotRemoteServerElixir, []}
     ]
   end
 

@@ -15,7 +15,7 @@
 defmodule RobotRemoteServerElixir do
   use Application
 
-  # def start do
-  #    Robot.Supervisor.start_link
-  # end
+   def start(_type, _args) do
+     Robot.Supervisors.RemoteServerSupervisor.start 
+   end
 end
