@@ -11,13 +11,11 @@ defmodule Robot.Supervisors.RemoteServerSupervisor do
 
   def init(:ok) do
     children = [
-      worker(Robot.Workers.RemoteServerWorker, [], [function: :start])
+      worker(Robot.Workers.RemoteServerWorker, [8270], [function: :start])
     ]
 
     options = [
-      strategy: :one_for_one,
-      max_restarts: 3,
-      max_seconds: 3
+      strategy: :one_for_one
     ]
 
     supervise(children, options)

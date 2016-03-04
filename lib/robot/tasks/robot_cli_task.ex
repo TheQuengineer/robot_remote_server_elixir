@@ -48,6 +48,7 @@ defmodule Mix.Tasks.Robot do
   defp process(answer) do
     if yes_answer?(answer) do
       IO.puts("Initiating the robot remote server....")
+      RobotRemoteServerElixir.start([],[])
     else
       IO.puts("Goodbye... for now.......")
       Process.exit(self, :normal)
